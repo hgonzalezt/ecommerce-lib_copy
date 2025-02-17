@@ -6,12 +6,20 @@ from src.dimension.pca_analysis import PCAAnalysis
 print("=== PRUEBA DEL PREPROCESSOR ===")
 
 # Crear datos de ejemplo
-data = {
+'''data = {
     'edad': [25, 30, 35, 40, 45],
     'salario': [30000, 45000, 50000, 60000, 80000],
     'categoria': ['A', 'B', 'A', 'C', 'B'],
     'ciudad': ['Madrid', 'Barcelona', 'Madrid', 'Valencia', 'Barcelona']
-}
+}'''
+
+# Cargar los archivos CSV
+data = pd.read_csv('../data/data.csv')
+data_pca = pd.read_csv('../data/data_pca.csv')
+data_segmentation = pd.read_csv('../data/data_segmentation.csv')
+df_transactions1 = pd.read_csv('../data/transactions.csv', header=None)
+transactions = df_transactions1.values.tolist()  # Asumiendo que df_transactions es un DataFrame
+
 
 df = pd.DataFrame(data)
 
@@ -37,6 +45,7 @@ print(df_encoded)
 print("\n=== PRUEBA DEL MARKET BASKET ANALYSIS ===")
 
 # Crear datos de ejemplo (transacciones de supermercado)
+'''
 transactions = [
     ['pan', 'leche', 'huevos'],
     ['pan', 'café', 'azúcar'],
@@ -47,7 +56,7 @@ transactions = [
     ['pan', 'leche', 'café', 'huevos'],
     ['pan', 'café', 'azúcar', 'galletas']
 ]
-
+'''
 # Crear instancia del análisis
 mba = MarketBasketAnalysis()
 
@@ -76,6 +85,7 @@ for item, score in recommendations.items():
 print("\n=== PRUEBA DEL PCA ANALYSIS ===")
 
 # Crear datos de ejemplo más complejos para PCA
+'''
 data_pca = {
     'altura': [170, 175, 160, 180, 165, 172, 168, 185],
     'peso': [70, 75, 55, 85, 60, 72, 65, 88],
@@ -83,7 +93,7 @@ data_pca = {
     'ingreso': [30000, 45000, 25000, 55000, 28000, 42000, 35000, 60000],
     'gasto_mensual': [1000, 1500, 800, 2000, 900, 1400, 1200, 2200]
 }
-
+'''
 df_pca = pd.DataFrame(data_pca)
 
 # Crear y ajustar PCA
@@ -123,6 +133,7 @@ print("\n=== PRUEBA DE CUSTOMER SEGMENTATION ===")
 from src.segmentation.customer_segmentation import CustomerSegmentation
 
 # Crear datos de ejemplo más realistas para segmentación
+'''
 data_segmentation = {
     'edad': [25, 35, 45, 28, 55, 32, 42, 38, 48, 30, 60, 35, 42, 28, 45],
     'ingreso_anual': [30000, 45000, 80000, 35000, 90000, 42000, 65000, 55000, 75000, 38000, 95000, 48000, 62000, 32000, 70000],
@@ -130,7 +141,7 @@ data_segmentation = {
     'frecuencia_compra': [2, 3, 5, 2, 6, 3, 4, 4, 5, 2, 6, 3, 4, 2, 4],
     'antiguedad_años': [1, 3, 8, 2, 10, 4, 6, 5, 7, 2, 12, 4, 5, 1, 6]
 }
-
+'''
 df_segmentation = pd.DataFrame(data_segmentation)
 
 # Crear y ajustar modelo de segmentación

@@ -6,7 +6,7 @@ setup(
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     install_requires=[
-        "pandas>=2.2.3",
+        "pandas>=2.0.0",
         "scikit-learn>=1.6.0",
         "mlxtend>=0.23.0",
         "joblib>=1.4.2",
