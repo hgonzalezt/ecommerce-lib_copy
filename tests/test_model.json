@@ -1,0 +1,15 @@
+{
+    "cluster_centers_": "None",
+    "evaluate_model": "<bound method CustomerSegmentation.evaluate_model of <src.segmentation.customer_segmentation.CustomerSegmentation object at 0x00000193DB4E3390>>",
+    "feature_names": "None",
+    "fit_kmeans": "<bound method CustomerSegmentation.fit_kmeans of <src.segmentation.customer_segmentation.CustomerSegmentation object at 0x00000193DB4E3390>>",
+    "get_cluster_profiles": "<bound method CustomerSegmentation.get_cluster_profiles of <src.segmentation.customer_segmentation.CustomerSegmentation object at 0x00000193DB4E3390>>",
+    "get_optimal_clusters": "<bound method CustomerSegmentation.get_optimal_clusters of <src.segmentation.customer_segmentation.CustomerSegmentation object at 0x00000193DB4E3390>>",
+    "get_segment_characteristics": "<bound method CustomerSegmentation.get_segment_characteristics of <src.segmentation.customer_segmentation.CustomerSegmentation object at 0x00000193DB4E3390>>",
+    "is_fitted": "False",
+    "labels_": "None",
+    "model": "KMeans(n_clusters=3, random_state=42)",
+    "n_clusters": "3",
+    "predict": "<bound method CustomerSegmentation.predict of <src.segmentation.customer_segmentation.CustomerSegmentation object at 0x00000193DB4E3390>>",
+    "scaler": "StandardScaler()"
+}

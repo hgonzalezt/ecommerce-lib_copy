@@ -2,6 +2,9 @@ import pandas as pd
 from src.preprocessor.data_preprocesor import DataPreprocessor
 from src.analysis.market_basket import MarketBasketAnalysis
 from src.dimension.pca_analysis import PCAAnalysis
+from src.segmentation.customer_segmentation import CustomerSegmentation
+import joblib
+
 
 print("=== PRUEBA DEL PREPROCESSOR ===")
 
@@ -22,6 +25,8 @@ transactions = df_transactions1.values.tolist()  # Asumiendo que df_transactions
 
 
 df = pd.DataFrame(data)
+
+print("\nCargar los archivos CSV:")
 
 # Crear instancia del preprocessor
 preprocessor = DataPreprocessor()
